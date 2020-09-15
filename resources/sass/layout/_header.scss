@@ -1,0 +1,93 @@
+.header {
+    width: 100%;
+    background-color: $color-bg;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    .header__constraint {
+        max-width: 1540px;
+        margin: 0 auto;
+
+        // @include larger-medium {
+        //     max-width: 1100px;
+        // }
+
+        .header__body {
+            display: grid;
+            grid-template-columns: 10% auto 12%;
+            // justify-content: space-between;
+            align-items: center;
+            height: 7rem;
+
+            @include medium {
+                grid-template-columns: 20% 80%;
+            }
+
+             > a {
+                padding-left: 50px;
+            }
+
+            img {
+                width: 5rem;
+                height: auto;
+            }
+
+            #main-nav {
+                display: flex;
+                justify-content: space-between;
+
+                @include medium {
+                    display: none;
+                }
+
+            ul {
+                display: flex;
+
+
+                li {
+                    list-style: none;
+                    margin: 0 3rem;
+
+                    &:first-child {
+                        margin-left: 5rem;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $color-text;
+                        }
+                    }
+                }
+            }
+            .icons {
+                // background-color: blue;
+                display: flex;
+
+                @include medium {
+                    justify-content: flex-end;
+                    padding-right: 50px;
+                }
+
+
+            .hamburger {
+                // display: none;
+                background-color: $color-white;
+                border-radius: 50px;
+                width: 3rem;
+                height: 3rem;
+                margin-right: 1rem;
+            }
+
+            .cart {
+                height: 3rem;
+                width: auto;
+            }
+
+}
+}
+}
+}

@@ -1,0 +1,63 @@
+.gallery {
+    background-color: $color-bg;
+
+    h3 {
+        text-align: center;
+    }
+
+    &__constraint {
+        margin: 0 auto;
+        margin-top: 8rem;
+        background: url(../../../public/img/cactuses-full.jpg) no-repeat center center fixed;
+        padding: 8rem 0;
+
+        &-grid {
+            width: 1440px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6rem 1rem;
+
+            // kaks eri mixini kirjutamise varianti
+            // @include mQ(1600px) {
+            //     width: 1000px;
+            //     grid-template-columns: repeat(3, 1fr);
+            // }
+
+            @include larger-medium {
+                width: 1000px;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 6rem 2rem;
+            }
+
+            @include medium {
+                width: 800px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            div {
+                height: 20rem;
+                width: 20rem;
+                background-color: white;
+                position: relative;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &:first-child {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .circle {
+                    height: 15rem;
+                    width: 15rem;
+                    border-radius: 50%;
+                    background-color: #F7F5F0;
+                }
+            }
+        }
+    }
+}

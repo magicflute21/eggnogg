@@ -1,0 +1,26 @@
+.swiper-container {
+    width: 37rem;
+    height: 36rem;
+    margin-top: 7rem;
+    background-color: aliceblue;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        &:last-child {
+            object-position: left;
+        }
+    }
+
+    // .swiper-pagination {
+    //     top: 90%;
+    // }
+}
+
+
+.swiper-pagination-bullet-active {
+    background-color: $color-fun2 !important;
+}

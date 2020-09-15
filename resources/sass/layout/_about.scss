@@ -1,0 +1,42 @@
+.about {
+    background-color: $color-fun1;
+    padding: 8rem 0 18rem 0;
+    position: relative;
+
+
+    &__constraint {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1440px;
+        margin: 0 auto;
+
+    .textbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 22rem;
+        width: 37rem;
+        margin-right: auto;
+        // padding-left: 6rem;
+
+        h6 {
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+
+    .imagebox {
+        border: 1px solid $color-bg;
+        background-image: url(../../../public/img/lightbulb.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 40%;
+        margin-left: auto;
+        height: 50rem;
+        width: 55rem;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.19);
+        position: absolute;
+        top: -15rem;
+        right: 0;
+    }
+}
+}

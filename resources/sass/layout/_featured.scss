@@ -1,0 +1,86 @@
+.featured {
+    background-color: $color-bg;
+
+    .color-block {
+        background-color: $color-fun1;
+        display: flex;
+        justify-content: center;
+        height: 25rem;
+        margin-top: -3rem;
+
+        h3 {
+            font-weight: 400;
+            align-self: center;
+            margin-top: -4rem;
+        }
+    }
+
+    &__constraint {
+        max-width: 1440px;
+        margin: 0 auto;
+        margin-top: -8rem;
+        padding-bottom: 10rem;
+
+        @include larger-medium {
+            max-width: 1000px;
+        }
+
+        @include smaller-medium {
+            max-width: 800px;
+        }
+
+
+
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+
+            @include smaller-medium {
+                grid-template-columns: 1fr;
+            }
+
+            div {
+                height: 25rem;
+                background-color: lightblue;
+
+                a {
+                    text-decoration: none;
+                    color: $color-white;
+                }
+
+                .featured__images {
+                    position: relative;
+
+                    &:first-child {
+                        background-image: url(../../../public/img/interior.jpg);
+                        background-size: cover;
+                    }
+
+                    &:nth-child(2) {
+                        background-image: url(../../../public/img/thewall.jpg);
+                        background-size: cover;
+                    }
+
+                    &:nth-child(3) {
+                        background-image: url(../../../public/img/rainboots.jpg);
+                        background-size: cover;
+                    }
+
+                    &:nth-child(4) {
+                        background-image: url(../../../public/img/sofa.jpg);
+                        background-size: cover;
+                    }
+
+                    h4 {
+                        font-weight: 400;
+                        position: absolute;
+                        bottom: 3rem;
+                        left: 5rem;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
